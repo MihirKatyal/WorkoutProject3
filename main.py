@@ -1,14 +1,3 @@
-import matplotlib.pyplot as plt
-
-def generate_temperature_graph(data, city_name):
-    temperatures = [data_point['main']['temp'] for data_point in data]
-    dates = [data_point['dt'] for data_point in data]  
-
-plt.figure(figsize=(10, 5))
-plt.plot(dates, temperatures, marker='o')
-plt.title(f'Temperature Trend for {city_name}')
-plt.xlabel('Date and Time')
-plt.ylabel('Temperature (K)')
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()   
+from weather_api import fetch_weather_data
+from file_io import write_data_to_file, read_data_from_file
+from visualization import generate_temperature_graph
