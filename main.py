@@ -6,4 +6,9 @@ def generate_temperature_graph(data, city_name):
 
 plt.figure(figsize=(10, 5))
 plt.plot(dates, temperatures, marker='o')
-plt.title(f'Temperature Trend for {city_name}')   
+plt.title(f'Temperature Trend for {city_name}')
+plt.xlabel('Date and Time')
+plt.ylabel('Temperature (K)')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()   
