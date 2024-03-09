@@ -1,6 +1,6 @@
 from weather_api import fetch_weather_data
 from file_io import write_data_to_file, read_data_from_file
-from visualization import generate_temperature_graph
+from visual import generate_temperature_graph
 
 def main():
     API_KEY = 'your_api_key_here'  # Replace with your actual OpenWeatherMap API key
